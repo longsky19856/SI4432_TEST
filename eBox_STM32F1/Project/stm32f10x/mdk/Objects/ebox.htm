@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ebox.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ebox.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu Nov 02 08:54:22 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat Nov 04 08:31:09 2017
 <BR><P>
 <H3>Maximum Stack Usage =        332 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1441,7 +1441,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i._Z5setupv)
 </UL>
-<P><STRONG><a name="[d9]"></a>setup()</STRONG> (Thumb, 136 bytes, Stack size 8 bytes, main.o(i._Z5setupv))
+<P><STRONG><a name="[d9]"></a>setup()</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, main.o(i._Z5setupv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = setup() &rArr; Uart::printf(const char*, ...) &rArr; __c89vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -2100,7 +2100,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart::printf(const char*, ...)
 </UL>
 
-<P><STRONG><a name="[89]"></a>main</STRONG> (Thumb, 208 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[89]"></a>main</STRONG> (Thumb, 272 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 332 + Unknown Stack Size
 <LI>Call Chain = main &rArr; RF_TxData(unsigned char*, unsigned char) &rArr; Si4432::write(unsigned char*, unsigned char) &rArr; Si4432::set_idle_mode() &rArr; Si4432::SpiWriteRegister(unsigned char, unsigned char) &rArr; Spi::take_spi_right(SpiConfig_t*) &rArr; delay_ms &rArr; micros
 </UL>
@@ -2339,7 +2339,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> object.o(.init_array)
 </UL>
-<P><STRONG><a name="[55]"></a>__sti___8_main_cpp_rf</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, main.o(i.__sti___8_main_cpp_rf))
+<P><STRONG><a name="[55]"></a>__sti___8_main_cpp_rf</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, main.o(i.__sti___8_main_cpp_rf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __sti___8_main_cpp_rf &rArr; Timer::Timer(TIM_TypeDef*)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer::Timer(TIM_TypeDef*)

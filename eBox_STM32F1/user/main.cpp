@@ -18,6 +18,7 @@ Si4432	rf(&PG8,&PG6,&PG7,&spi2);
 Button btn(&PE4, 1);
 
 Led     led_net(&PB5,0);
+Led     led_echo(&PE5,0);
 Timer timer1(TIM1);
 Timer timer2(TIM2);
 
@@ -105,6 +106,7 @@ void setup()
 	rf.begin(2);
 	btn.begin();
 	led_net.begin();
+  led_echo.begin();
   //
   timer1.begin(1);    
   timer1.attach(t1it);
@@ -146,14 +148,23 @@ int main(void)
             
           if( 1==module_si4432 )
             {
+              module_si4432=2;
+              led_echo.on();
+              led_net.off();
+              uart1.printf("\r\nclick event!,echo_module");
+            }
+            else if(2==module_si4432)
+            {
               module_si4432=0;
               led_net.off();
+              led_echo.off();
               uart1.printf("\r\nclick event!,rx_module");
             }
             else
             {
               module_si4432=1;
               led_net.on();
+              led_echo.off();
               uart1.printf("\r\nclick event!£¬tx_module");
             }
             uart1.printf("click event!\r\n");
@@ -185,6 +196,10 @@ int main(void)
       }
       //uart1.printf("\n");
       rf.set_rx_mode();
+      if(2==module_si4432)
+      {
+        RF_TxData(rbuf,read_len);
+      }
 		}
     
     
